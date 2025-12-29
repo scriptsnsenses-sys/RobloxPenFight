@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pen Fight Newspaper</title>
+  <style>
+    :root {
+      --ink: #111;
+      --paper: #f6f1e7;
+      --accent: #8b0000;
+      --muted: #666;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+    header {
+      border-bottom: 4px double var(--ink);
+      padding: 24px 16px 12px;
+      text-align: center;
+    }
+    .masthead {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+    .tagline {
+      margin-top: 6px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+    main {
+      padding: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    article {
+      background: rgba(255,255,255,0.5);
+      padding: 16px;
+      border: 1px solid #ddd;
+    }
+    .headline {
+      font-size: 2rem;
+      margin: 0 0 8px;
+    }
+    .byline {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .dropcap::first-letter {
+      float: left;
+      font-size: 3.2rem;
+      line-height: 1;
+      padding-right: 8px;
+      font-weight: bold;
+    }
+    .sidebar {
+      display: grid;
+      gap: 16px;
+    }
+    .box {
+      background: rgba(255,255,255,0.7);
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+    .box h3 {
+      margin-top: 0;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 4px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      margin-right: 6px;
+    }
+    footer {
+      border-top: 4px double var(--ink);
+      margin-top: 24px;
+      padding: 12px 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    ul { padding-left: 18px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="masthead">PEN FIGHT NEWSPAPER</div>
+    <div class="tagline">The Official News Source of the Pen Fight Arena</div>
+    <div class="meta">
+      <span>Edition: V4.1</span>
+      <span>•</span>
+      <span id="date"></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid">
+      <article>
+        <h1 class="headline">Pen Fight Hits #1 on Roblox Search</h1>
+        <div class="byline">By The Pen Fight Team • Breaking News</div>
+        <p class="dropcap">
+          Pen Fight has officially reached 1st place in Roblox by you guys support and our efforts. We are planning to host a big giveaway to celebrate it. Thanks for your support and efforts without you guys it was not possible to hit the 1st place on Roblox.
+        <p>
+          With Version 4.1 now live, players can expect smoother performance, competitive leaderboards, and seasonal visual effects that bring the arena to life.
+        </p>
+      </article>
+
+      <aside class="sidebar">
+        <div class="box">
+          <h3>Latest Update</h3>
+          <ul>
+            <li>🏟️ New Lobby</li>
+            <li>🏆 Global Leaderboards</li>
+            <li>🏃 Sprinting System Update</li>
+            <li>❄️ Christmas Snowfall Effect</li>
+            <li>🐞 Major Bug Fixes</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Dev Notes</h3>
+          <p><span class="badge">BETA</span> Version 4.1 focuses on stability, polish, and player feedback. More content is already in development.</p>
+        </div>
+        <div class="box">
+          <h3>Strange Merchant spotted</h3>
+          <p>A strange man was spotted in the lobby. The guy had a full bagpack full of pens oof different variants. He had a full team with him. Evrybody with him had a special thing.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Pen Fight Newspaper • All rights reserved
+  </footer>
+
+  <script>
+    const d = new Date();
+    document.getElementById('date').textContent = d.toDateString();
+  </script>
+</body>
+</html>
